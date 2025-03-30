@@ -11,7 +11,8 @@ public enum Trigger
     OFFICE_MOVE,
     LOBBY_ZOOM,
     SECURITY_ZOOM,
-    OFFICE_ZOOM
+    OFFICE_ZOOM, 
+    //INVESTIGATE
 }
 
 public class InteractTrigger : MonoBehaviour
@@ -22,6 +23,7 @@ public class InteractTrigger : MonoBehaviour
     private bool isZoomTrigger;
     [SerializeField]
     private bool isMoveTrigger;
+   // [SerializeField]    private bool isInvestgateTrigger;
 
     public Trigger trigger;
 
