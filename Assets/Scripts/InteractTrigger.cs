@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public enum Trigger
 {
@@ -29,13 +30,22 @@ public class InteractTrigger : MonoBehaviour
         //if (trigger == null) { Debug.LogError("Trigger name not found"); Debug.Break(); }
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag.Equals("Mouse")) {
+            other.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
             //Change cursor color/shape
             if (Input.GetMouseButtonDown(0)) {
                 TriggerEvent();
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Mouse"))
+        {
+            collision.GetComponentInChildren<Image>().color = Color.white;
         }
     }
 
@@ -44,14 +54,17 @@ public class InteractTrigger : MonoBehaviour
         if (isDialogueTrigger)
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().PlayDialogue(dialogue);
+            Debug.Log("Triggered dialogue");
         }
         else if (isZoomTrigger)
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().Move(trigger);
+            Debug.Log("Triggered zoom");
         }
         else if (isMoveTrigger)
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().Move(trigger);
+            Debug.Log("Triggered move");
         }
     }
 }
