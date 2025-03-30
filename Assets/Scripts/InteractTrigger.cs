@@ -27,18 +27,38 @@ public class InteractTrigger : MonoBehaviour
 
     public Trigger trigger;
 
+    [TextArea(2, 10)]
+    public string flavorText;
+
     [TextArea(4, 10)]
     public string[] dialogue;
 
-    private void Start()
-    {
-        //if (trigger == null) { Debug.LogError("Trigger name not found"); Debug.Break(); }
-    }
+    private GameObject flavorTextObj = null;
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag.Equals("Mouse")) {
             other.GetComponentInChildren<Image>().color = new Color(0.31f, 0.839f, 1f);
+            flavorTextObj = null;
+            if (flavorText != null && flavorText.Length > 0)
+            {
+               
+                
+                GameObject mouse = GameObject.Find("Mouse");
+                for (int i = 0; i < mouse.transform.childCount; i++)
+                {
+                    GameObject child = mouse.transform.GetChild(i).gameObject;
+                    if (child.name.Equals("FlavorText"))
+                    {
+                        flavorTextObj = child;
+                        break;
+                    }
+                }
+                flavorTextObj.SetActive(true);
+                flavorTextObj.GetComponent<TextMeshProUGUI>().text = flavorText;
+
+            }
+
             //Change cursor color/shape
             if (Input.GetMouseButtonDown(0)) {
                 other.GetComponentInChildren<Image>().color = Color.white;
@@ -54,6 +74,27 @@ public class InteractTrigger : MonoBehaviour
         {
             Debug.Log("Mouse has left.");
             collision.GetComponentInChildren<Image>().color = Color.white;
+            if (flavorText != null && flavorText.Length > 0)
+            {
+                if (flavorText != null && flavorText.Length > 0)
+                {
+                    GameObject flavorTextObj = null;
+
+                    GameObject mouse = GameObject.Find("Mouse");
+                    for (int i = 0; i < mouse.transform.childCount; i++)
+                    {
+                        GameObject child = mouse.transform.GetChild(i).gameObject;
+                        if (child.name.Equals("FlavorText"))
+                        {
+                            flavorTextObj = child;
+                            break;
+                        }
+                    }
+                    flavorTextObj.GetComponent<TextMeshProUGUI>().text = "";
+                    flavorTextObj.SetActive(false);
+
+                }
+            }
         }
     }
 
@@ -61,6 +102,7 @@ public class InteractTrigger : MonoBehaviour
     {
         if (isDialogueTrigger)
         {
+            flavorTextObj.SetActive(false);
             GameObject.Find("GameManager").GetComponent<GameManager>().PlayDialogue(dialogue);
             Debug.Log("Triggered dialogue");
         }
@@ -78,7 +120,7 @@ public class InteractTrigger : MonoBehaviour
 
     IEnumerator Buffer()
     {
-        yield return new WaitForSeconds(.25f);
+        yield return new WaitForSeconds(.15f);
         TriggerEvent();
     }
 }
