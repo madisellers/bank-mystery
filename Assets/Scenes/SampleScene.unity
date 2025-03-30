@@ -723,7 +723,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2004188632}
-  - {fileID: 419855282}
+  - {fileID: 771381851}
   m_Father: {fileID: 418420027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITLE
+  m_text: Short Change
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -815,8 +815,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 234.72
+  m_fontSizeBase: 234.72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 5
-  flavorText: 
+  flavorText: Look at desk
   dialogue: []
 --- !u!1 &418420026
 GameObject:
@@ -1148,129 +1148,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &419855281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 419855282}
-  - component: {fileID: 419855285}
-  - component: {fileID: 419855284}
-  - component: {fileID: 419855283}
-  m_Layer: 5
-  m_Name: Evidence Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &419855282
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419855281}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 335693963}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 71}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!54 &419855283
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419855281}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!135 &419855284
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419855281}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 353.6
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &419855285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419855281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b286c88708b3a45ad23aa8d3287549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDialogueTrigger: 1
-  isZoomTrigger: 0
-  isMoveTrigger: 0
-  seesKey: 0
-  seesVideo: 1
-  seesPaper: 0
-  catchCulprit: 0
-  trigger: 4
-  flavorText: 
-  dialogue:
-  - 'Investigator:
-
-
-    Could you please pull out your master key?
-
-'
-  - "Security Guard: \n\nI had a family emergency that day. He told me to come in
-    and leave them at his desk before going. "
-  - "Investigator: \n\nAre you aware that your keys were found next to the victim?
-    Paper won\u2019t cover it up. "
-  - "Security guard:\n\nI\u2019m aware that as the night guard, I would be the most
-    likely suspect, but I promise I would never commit such a heinous crime. "
-  - "Investigator: \n\nIf you were not on night watch, then who was?"
-  - "Security guard: \n\nNo one, as far as I\u2019m aware, but if there was anyone
-    who would stay, it would have been his best friend."
 --- !u!1 &440434876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,9 +2513,131 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 2
-  flavorText: 
+  flavorText: Office
   dialogue:
   - 
+--- !u!1 &771381850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771381851}
+  - component: {fileID: 771381854}
+  - component: {fileID: 771381853}
+  - component: {fileID: 771381852}
+  m_Layer: 5
+  m_Name: Evidence Dialogue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &771381851
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771381850}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 335693963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 71}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!54 &771381852
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771381850}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!135 &771381853
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771381850}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 353.6
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &771381854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771381850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b286c88708b3a45ad23aa8d3287549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDialogueTrigger: 1
+  isZoomTrigger: 0
+  isMoveTrigger: 0
+  seesKey: 0
+  seesVideo: 1
+  seesPaper: 0
+  catchCulprit: 0
+  trigger: 4
+  flavorText: Watch video
+  dialogue:
+  - "Investigator: \n\nThere isn\u2019t one for the office?"
+  - "Manger:\n\nOf course not. He didn\u2019t want anyone to see him treat people
+    the way he did. "
+  - "Investigator: \n\nYou seem to dislike him. "
+  - "Manager: \n\nDid I ever! This is the only bank I ever worked for that would
+    not increase its pay to managers. \n"
+  - "Managr: \n\nI apparently earned enough already and didn\u2019t need a raise
+    for the additional responsibility. "
+  - "Manager:\n\nThat doesn\u2019t matter now, though. I have already resigned, and
+    once this investigation is over, I will finally be in a good job."
+  - "Investigator: \n\nIt seems he was angrier with you. Did he threaten you? Did
+    you retaliate? "
+  - "Manager: \n\nOf course not! I hated him, but I would never have murdered him.
+    Especially not after he threatened my life. "
 --- !u!1 &800126737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,7 +2784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -37}
   m_SizeDelta: {x: 741.9, y: 195.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009788810
@@ -2837,13 +2836,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 73.7
+  m_fontSizeBase: 73.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3070,7 +3069,7 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 3
-  flavorText: Click to being
+  flavorText: Click to begin
   dialogue:
   - "Deputy: \n\nYesterday, the bank owner of a local credit union was found dead
     in his office. This morning, a young bank teller called in a panic, saying his
@@ -3169,7 +3168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1076711476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3297,7 +3296,7 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 4
-  flavorText: 
+  flavorText: Look at monitor
   dialogue: []
 --- !u!1 &1136888916
 GameObject:
@@ -3327,7 +3326,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1190683121}
+  - {fileID: 1521888548}
   - {fileID: 1647238153}
   m_Father: {fileID: 930744597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3373,128 +3372,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1190683120
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1190683121}
-  - component: {fileID: 1190683124}
-  - component: {fileID: 1190683123}
-  - component: {fileID: 1190683122}
-  m_Layer: 5
-  m_Name: Evidence Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1190683121
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190683120}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1136888917}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 71}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!54 &1190683122
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190683120}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!135 &1190683123
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190683120}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 353.6
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1190683124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190683120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b286c88708b3a45ad23aa8d3287549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDialogueTrigger: 1
-  isZoomTrigger: 0
-  isMoveTrigger: 0
-  seesKey: 1
-  seesVideo: 0
-  seesPaper: 0
-  catchCulprit: 0
-  trigger: 5
-  flavorText: 
-  dialogue:
-  - "Investigator: \n\nThere isn\u2019t one for the office?"
-  - "Manger:\n\nOf course not. He didn\u2019t want anyone to see him treat people
-    the way he did. "
-  - "Investigator: \n\nYou seem to dislike him. "
-  - "Manager: \n\nDid I ever! This is the only bank I ever worked for that would
-    not increase its pay to managers. \n"
-  - "Managr: \n\nI apparently earned enough already and didn\u2019t need a raise
-    for the additional responsibility. "
-  - "Manager:\n\nThat doesn\u2019t matter now, though. I have already resigned, and
-    once this investigation is over, I will finally be in a good job."
-  - "Investigator: \n\nIt seems he was angrier with you. Did he threaten you? Did
-    you retaliate? "
-  - "Manager: \n\nOf course not! I hated him, but I would never have murdered him.
-    Especially not after he threatened my life. "
 --- !u!1 &1239686844
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,7 +3698,7 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 0
-  flavorText: 
+  flavorText: Lobby
   dialogue: []
 --- !u!1 &1340934322
 GameObject:
@@ -3931,9 +3808,8 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 1
-  flavorText: 
-  dialogue:
-  - 
+  flavorText: Security
+  dialogue: []
 --- !u!1 &1350193939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4042,7 +3918,7 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 0
-  flavorText: 
+  flavorText: Lobby
   dialogue:
   - 
 --- !u!1 &1415001971
@@ -4302,7 +4178,7 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 2
-  flavorText: Accuse Manager
+  flavorText: Accuse Security
   dialogue:
   - 'Investigator:
 
@@ -4658,6 +4534,129 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 160.92, y: 30.02, z: 4.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1521888547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521888548}
+  - component: {fileID: 1521888551}
+  - component: {fileID: 1521888550}
+  - component: {fileID: 1521888549}
+  m_Layer: 5
+  m_Name: Evidence Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1521888548
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521888547}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1136888917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 71}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!54 &1521888549
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521888547}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!135 &1521888550
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521888547}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 353.6
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1521888551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521888547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b286c88708b3a45ad23aa8d3287549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDialogueTrigger: 1
+  isZoomTrigger: 0
+  isMoveTrigger: 0
+  seesKey: 1
+  seesVideo: 0
+  seesPaper: 0
+  catchCulprit: 0
+  trigger: 5
+  flavorText: Look at key
+  dialogue:
+  - 'Investigator:
+
+
+    Could you please pull out your master key?
+
+'
+  - "Security Guard: \n\nI had a family emergency that day. He told me to come in
+    and leave them at his desk before going. "
+  - "Investigator: \n\nAre you aware that your keys were found next to the victim?
+    Paper won\u2019t cover it up. "
+  - "Security guard:\n\nI\u2019m aware that as the night guard, I would be the most
+    likely suspect, but I promise I would never commit such a heinous crime. "
+  - "Investigator: \n\nIf you were not on night watch, then who was?"
+  - "Security guard: \n\nNo one, as far as I\u2019m aware, but if there was anyone
+    who would stay, it would have been his best friend."
 --- !u!1 &1538836056
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,9 +5133,8 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 2
-  flavorText: 
-  dialogue:
-  - 
+  flavorText: Back
+  dialogue: []
 --- !u!1 &1662883268
 GameObject:
   m_ObjectHideFlags: 0
@@ -5245,7 +5243,7 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 2
-  flavorText: Accuse Security
+  flavorText: Accuse Manager
   dialogue:
   - 'Investigator:
 
@@ -5382,7 +5380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1758720271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5755,7 +5753,7 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 1
-  flavorText: 
+  flavorText: Back
   dialogue: []
 --- !u!1 &2027190605
 GameObject:

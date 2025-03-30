@@ -12,6 +12,11 @@ public class MouseCursor : MonoBehaviour
     void Update()
     {
         transform.position = Input.mousePosition;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
 
