@@ -12,6 +12,9 @@ public enum Trigger
     LOBBY_ZOOM,
     SECURITY_ZOOM,
     OFFICE_ZOOM, 
+    OPENING_MOVE,
+    ACCUSE_MOVE,
+    END_MOVE
     //INVESTIGATE
 }
 
@@ -23,7 +26,17 @@ public class InteractTrigger : MonoBehaviour
     private bool isZoomTrigger;
     [SerializeField]
     private bool isMoveTrigger;
-   // [SerializeField]    private bool isInvestgateTrigger;
+
+    [SerializeField]
+    private bool seesKey;
+    [SerializeField]
+    private bool seesVideo;
+    [SerializeField]
+    private bool seesPaper;
+
+    [SerializeField]
+    private bool catchCulprit;
+    // [SerializeField]    private bool isInvestgateTrigger;
 
     public Trigger trigger;
 
@@ -100,6 +113,22 @@ public class InteractTrigger : MonoBehaviour
 
     void TriggerEvent()
     {
+        if (seesKey)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().SawKey();
+        }
+        if (seesVideo)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().SawVideo();
+        }
+        if (seesPaper)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().SawPaper();
+        }
+        if (catchCulprit)
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().SetAtEnd(true);
+        }
         if (isDialogueTrigger)
         {
             flavorTextObj.SetActive(false);
