@@ -35,7 +35,6 @@ public class DialogueManager : MonoBehaviour
     public void UpdateLines(string[] lines)
     {
         this.lines = (string[])lines.Clone();
-       
     }
 
     public void UpdateIndex()

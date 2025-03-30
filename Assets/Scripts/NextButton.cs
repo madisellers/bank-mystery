@@ -35,7 +35,7 @@ public class NextButton : MonoBehaviour
 
     IEnumerator Buffer()
     {
-        yield return new WaitForSeconds(.25f);
+        yield return new WaitForSeconds(.15f);
         dialogueManager.UpdateIndex();
         dialogueManager.DisplayText();
     }

@@ -4,6 +4,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public bool atStart = false;
+
     [SerializeField]
     private GameObject[] rooms;
 
@@ -37,6 +39,11 @@ public class GameManager : MonoBehaviour
         GameObject triggers = null;
         for (int i = 0; i < currentRoom.transform.childCount; i++)
         {
+            if (atStart)
+            {
+                atStart = false;
+                Move(Trigger.LOBBY_MOVE);
+            }
             GameObject child = currentRoom.transform.GetChild(i).gameObject;
             if (child.name.Equals("Triggers"))
             {
@@ -64,6 +71,16 @@ public class GameManager : MonoBehaviour
                 rooms[i].SetActive(false);
             }
         }
+    }
+
+    public void SetCurrentRoom(GameObject room)
+    {
+        currentRoom = room;
+    }
+
+    public void SetAtStart(bool atStart)
+    {
+        this.atStart = atStart;
     }
 
     
