@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -23,6 +25,7 @@ public class InteractTrigger : MonoBehaviour
 
     public Trigger trigger;
 
+    [TextArea(4, 10)]
     public string[] dialogue;
 
     private void Start()
@@ -30,21 +33,24 @@ public class InteractTrigger : MonoBehaviour
         //if (trigger == null) { Debug.LogError("Trigger name not found"); Debug.Break(); }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag.Equals("Mouse")) {
-            other.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
+            other.GetComponentInChildren<Image>().color = new Color(0.31f, 0.839f, 1f);
             //Change cursor color/shape
             if (Input.GetMouseButtonDown(0)) {
-                TriggerEvent();
+                other.GetComponentInChildren<Image>().color = Color.white;
+
+                StartCoroutine(Buffer());
             }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag.Equals("Mouse"))
         {
+            Debug.Log("Mouse has left.");
             collision.GetComponentInChildren<Image>().color = Color.white;
         }
     }
@@ -66,5 +72,11 @@ public class InteractTrigger : MonoBehaviour
             GameObject.Find("GameManager").GetComponent<GameManager>().Move(trigger);
             Debug.Log("Triggered move");
         }
+    }
+
+    IEnumerator Buffer()
+    {
+        yield return new WaitForSeconds(.25f);
+        TriggerEvent();
     }
 }

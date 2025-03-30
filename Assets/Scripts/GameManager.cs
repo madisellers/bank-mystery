@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,33 +14,37 @@ public class GameManager : MonoBehaviour
 
     public void PlayDialogue(string[] lines)
     {
-        GameObject[] gos = currentRoom.GetComponentsInChildren<GameObject>();
         GameObject triggers = null;
-        for (int i = 0; i < gos.Length; i++)
+        Debug.Log("Playing dialogue");
+        Debug.Log("Current room: " + currentRoom.name);
+        for (int i = 0; i < currentRoom.transform.childCount; i++)
         {
-            if (gos[i].name.Equals("Triggers"))
+            GameObject child = currentRoom.transform.GetChild(i).gameObject;
+            if (child.name.Equals("Triggers"))
             {
-                triggers = gos[i];
+                triggers = currentRoom.transform.GetChild(i).gameObject;
                 break;
             }
         }
         triggers.SetActive(false);
         dialoguePanel.SetActive(true);
-        //dialoguePanel.GetComponent<DialogueManager>();
+        dialoguePanel.GetComponent<DialogueManager>().UpdateLines(lines);
+        dialoguePanel.GetComponent<DialogueManager>().DisplayText();
     }
 
     public void StopDialogue()
     {
-        GameObject[] gos = currentRoom.GetComponentsInChildren<GameObject>();
         GameObject triggers = null;
-        for (int i = 0; i < gos.Length; i++)
+        for (int i = 0; i < currentRoom.transform.childCount; i++)
         {
-            if (gos[i].name.Equals("Triggers"))
+            GameObject child = currentRoom.transform.GetChild(i).gameObject;
+            if (child.name.Equals("Triggers"))
             {
-                triggers = gos[i];
+                triggers = currentRoom.transform.GetChild(i).gameObject;
                 break;
             }
         }
+
         triggers.SetActive(true);
         dialoguePanel.SetActive(false);
     }
