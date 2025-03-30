@@ -788,7 +788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (TITLE HERE)
+  m_text: TITLE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2810,7 +2810,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'By Madison Sellers
 
-    and ___________'
+    and Rose Alvarado'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3070,9 +3070,15 @@ MonoBehaviour:
   seesPaper: 0
   catchCulprit: 0
   trigger: 3
-  flavorText: Click to begin
+  flavorText: Click to being
   dialogue:
-  - The game will now start.
+  - "Deputy: \n\nYesterday, the bank owner of a local credit union was found dead
+    in his office. This morning, a young bank teller called in a panic, saying his
+    boss and dear friend were lying dead on his desk. "
+  - "Deputy: \n\nThe autopsy shows it was poison that killed at around 11:00 pm.
+    Only the manager and the security guard had access to the building that night. "
+  - "Deputy: \n\nAn easy first case for our recruit. Are you ready for the job?"
+  - "Investigator: \n\nOf course."
 --- !u!1 &1049306879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,7 +3169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1076711476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4201,7 +4207,7 @@ GameObject:
   - component: {fileID: 1440987359}
   - component: {fileID: 1440987358}
   m_Layer: 5
-  m_Name: Manager Accuse
+  m_Name: Security Accuse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4245,10 +4251,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 157.5
-  m_Height: 780.3
+  m_Radius: 266.4134
+  m_Height: 1137.9263
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 17.881226, y: 3.6343e-15, z: -16.255737}
 --- !u!54 &1440987359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4298,7 +4304,13 @@ MonoBehaviour:
   trigger: 2
   flavorText: Accuse Manager
   dialogue:
-  - It was manager
+  - 'Investigator:
+
+
+    He did it!'
+  - "Security guard: \n\nI have a solid alibi. Call my family they'll tell you I
+    was there the whole day. I"
+  - "Investigator: \n\n I have to think about everything I learned. "
 --- !u!1 &1448420644
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,8 +4345,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 28, y: -0.000020981}
+  m_SizeDelta: {x: 1968.2737, y: 1098.8491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448420646
 MonoBehaviour:
@@ -4356,7 +4368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -9196764060782630626, guid: 16d4e06f29e2e42ae98a4b714b4c2c3e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5138,7 +5150,7 @@ GameObject:
   - component: {fileID: 1662883271}
   - component: {fileID: 1662883270}
   m_Layer: 5
-  m_Name: Security Accuse
+  m_Name: Manager Accuse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5182,10 +5194,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 157.5
-  m_Height: 780.3
+  m_Radius: 204.64162
+  m_Height: 1131.4238
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -27.634705, y: -9.6037815e-14, z: 22.758057}
 --- !u!54 &1662883271
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5235,7 +5247,13 @@ MonoBehaviour:
   trigger: 2
   flavorText: Accuse Security
   dialogue:
-  - It was security
+  - 'Investigator:
+
+
+    He did it!'
+  - "Manager: \n\nWhat's your evidence? If your going to accuse someone the least
+    you could do is give proof. "
+  - I messed up!
 --- !u!1 &1753401893
 GameObject:
   m_ObjectHideFlags: 0
@@ -5364,7 +5382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1758720271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5979,10 +5997,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 157.5
-  m_Height: 780.3
+  m_Radius: 220.7862
+  m_Height: 933.51917
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 63.28621, y: -1.7919368e-13, z: 76.60962}
 --- !u!54 &2122978812
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6032,7 +6050,27 @@ MonoBehaviour:
   trigger: 2
   flavorText: Accuse Teller
   dialogue:
-  - it was the teller
+  - 'Investigator:
+
+
+    He did it!'
+  - "Teller: \n\nI would never do that to my best friend! He gave me this job, I
+    owe everything to him why would I do that? "
+  - "Investigator: \n\nYou always hear him complain about everyone else, but you
+    never thought he would do that to you. "
+  - "Investigator: \n\nYou took the guard's shift, you heard him complain about management,
+    and asked him for a simple favor, only for it to backfire. How else would you
+    have known about the fight? "
+  - "Investigator: \n \nThat loan denial was your\u2019s was it not? He was your
+    friend, you needed him but denying a simple loan to save your mother was the
+    last straw. "
+  - "Investigator: \n \nMr. Teller, did you murder the owner? "
+  - 'Teller
+
+
+    ....'
+  - "Teller\n\nI thought he would save her, but he only cared about money. I couldn\u2019t
+    stand it anymore, so when he asked for a drink, I had to. "
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
